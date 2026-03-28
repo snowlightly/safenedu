@@ -26,22 +26,33 @@
             margin: 0 15px;
         }
 
-        /* 배너 이미지 */
+        /* 배너 이미지 섹션 공통 스타일 */
         .main-banner {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1200px; /* 배너 최대 너비 조절 가능 */
             height: auto;
             display: block;
             margin: 0 auto;
         }
+        
+        /* 배너 사이 간격을 없애려면 아래 스타일 추가 (선택) */
+        /*
+        #banner1 {
+            margin-bottom: 0;
+        }
+        #banner2 {
+            margin-top: 0;
+        }
+        */
 
         /* 교육 문구 섹션 (한 줄 배치) */
         .education-section {
-            padding: 60px 0;
+            padding: 60px 20px;
             display: flex;
             justify-content: center; /* 가로 중앙 정렬 */
             align-items: center;
             gap: 30px; /* 문구 사이 간격 */
+            flex-wrap: wrap; /* 화면이 좁아지면 아래로 줄바꿈 */
         }
 
         .education-text {
@@ -49,13 +60,26 @@
             font-size: 36px; /* 요청사항: 36 */
             color: #333;
             margin: 0;
-            white-space: nowrap; /* 줄바꿈 방지 */
         }
 
         /* 문구 사이 구분선 (선택 사항) */
         .divider {
             font-size: 30px;
             color: #ccc;
+        }
+        
+        /* 모바일 대응 (선택 사항): 화면이 좁을 때 글자 크기 조정 */
+        @media (max-width: 768px) {
+            .education-text {
+                font-size: 24px;
+            }
+            .divider {
+                display: none; /* 모바일에서는 구분선 숨김 */
+            }
+            .education-section {
+                flex-direction: column; /* 모바일에서는 세로로 배치 */
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -70,9 +94,17 @@
         <a href="contact.html">문의하기</a>
     </nav>
 
-    <img src="Banner_R1.png" alt="메인 배너" class="main-banner">
+    <img src="Banner_R1.png" alt="메인 배너 1" class="main-banner" id="banner1">
+    
+    <img src="Banner_R2.png" alt="메인 배너 2" class="main-banner" id="banner2">
 
     <div class="education-section">
         <p class="education-text">학교안전교육 7대 표준교육</p>
         <span class="divider">|</span>
-        <p
+        <p class="education-text">생애주기별 6대 안전교육</p>
+        <span class="divider">|</span>
+        <p class="education-text">산업체 안전교육</p>
+    </div>
+
+</body>
+</html>
