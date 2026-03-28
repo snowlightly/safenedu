@@ -2,58 +2,48 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>안전교육센터</title>
+    <title>안전교육센터 홈</title>
     <style>
-        /* 기본 폰트 설정: 맑은 고딕 */
+        /* 기본 설정: 맑은 고딕, 여백 제거 */
         body {
             margin: 0;
+            padding: 0;
             font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
-            line-height: 1.6;
+            text-align: center;
         }
 
-        /* 네비게이션 바 스타일 */
+        /* 네비게이션 바 */
         nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
             padding: 20px 0;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
         }
 
         nav a {
             text-decoration: none;
-            color: #000;
-            font-size: 22px; /* 요청사항: 22pt */
-            font-weight: bold; /* 요청사항: 굵게 */
+            color: black;
+            font-weight: bold;
+            font-size: 22px; /* 요청사항: 22 */
+            margin: 0 15px;
         }
 
-        /* 배너 이미지 섹션 */
-        .banner {
+        /* 배너 이미지 */
+        .main-banner {
             width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .banner img {
-            width: 100%;
-            max-width: 1200px; /* 배너 가로 제한 (조정 가능) */
+            max-width: 1200px; /* 배너 최대 너비 조절 가능 */
             height: auto;
             display: block;
+            margin: 0 auto;
         }
 
-        /* 하단 교육 문구 섹션 */
-        .education-list {
-            text-align: center;
-            margin-top: 50px;
-            padding-bottom: 100px;
+        /* 교육 문구 섹션 */
+        .education-section {
+            padding: 50px 0;
         }
 
-        .education-list p {
-            font-size: 36px; /* 요청사항: 36pt */
-            font-weight: bold; /* 요청사항: 굵게 */
-            margin: 20px 0;
+        .education-text {
+            font-weight: bold;
+            font-size: 36px; /* 요청사항: 36 */
+            margin: 30px 0;
             color: #333;
         }
     </style>
@@ -69,15 +59,13 @@
         <a href="contact.html">문의하기</a>
     </nav>
 
-    <section class="banner">
-        <img src="Banner_R1.png" alt="메인 배너 이미지">
-    </section>
+    <img src="Banner_R1.png" alt="메인 배너" class="main-banner">
 
-    <section class="education-list">
-        <p>학교안전교육 7대 표준교육</p>
-        <p>생애주기별 6대 안전교육</p>
-        <p>산업체 안전교육</p>
-    </section>
+    <div class="education-section">
+        <p class="education-text">학교안전교육 7대 표준교육</p>
+        <p class="education-text">생애주기별 6대 안전교육</p>
+        <p class="education-text">산업체 안전교육</p>
+    </div>
 
 </body>
 </html>
