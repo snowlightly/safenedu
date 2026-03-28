@@ -29,22 +29,33 @@
         /* 배너 이미지 */
         .main-banner {
             width: 100%;
-            max-width: 1200px; /* 배너 최대 너비 조절 가능 */
+            max-width: 1200px;
             height: auto;
             display: block;
             margin: 0 auto;
         }
 
-        /* 교육 문구 섹션 */
+        /* 교육 문구 섹션 (한 줄 배치) */
         .education-section {
-            padding: 50px 0;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center;
+            gap: 30px; /* 문구 사이 간격 */
         }
 
         .education-text {
             font-weight: bold;
             font-size: 36px; /* 요청사항: 36 */
-            margin: 30px 0;
             color: #333;
+            margin: 0;
+            white-space: nowrap; /* 줄바꿈 방지 */
+        }
+
+        /* 문구 사이 구분선 (선택 사항) */
+        .divider {
+            font-size: 30px;
+            color: #ccc;
         }
     </style>
 </head>
@@ -63,9 +74,5 @@
 
     <div class="education-section">
         <p class="education-text">학교안전교육 7대 표준교육</p>
-        <p class="education-text">생애주기별 6대 안전교육</p>
-        <p class="education-text">산업체 안전교육</p>
-    </div>
-
-</body>
-</html>
+        <span class="divider">|</span>
+        <p
