@@ -3,32 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafenEdu - 안전교육 전문</title>
-    <meta name="naver-site-verification" content="1bf4ef1fb21813f869f52022a9bfb927428c5216" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+    <title>세이프N교육센터 - 교육사진</title>
+    <style>
+        /* 기본 설정 */
+        body, html { margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; }
+
+        /* 헤더: 로고만 배치 */
+        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { height: 60px; display: block; }
+
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
+        nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
+
+        /* 타이틀 섹션 */
+        .title-section { text-align: center; padding: 60px 20px; }
+        .main-title { font-size: 32px; font-weight: bold; margin-bottom: 20px; }
+        .sub-title { font-size: 18px; color: #555; }
+
+        /* 사진 그리드 레이아웃 */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* 사진 크기 유지하며 자동 배치 */
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .photo-item {
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc; /* 이미지 속 점선 박스 느낌 구현 */
+            aspect-ratio: 16 / 9; /* 사진 비율 고정 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 영역에 꽉 차게 */
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05); /* 마우스 올리면 살짝 확대 */
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .gallery-container { grid-template-columns: 1fr; }
+            .main-title { font-size: 24px; }
+            .sub-title { font-size: 16px; word-break: keep-all; }
+            header { padding: 0 20px; }
+            nav a { font-size: 14px; gap: 10px; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>SafenEdu</h1>
+        <a href="index.html" class="logo-area">
+            <img src="Logo.png" alt="세이프N교육센터 로고">
+        </a>
         <nav>
-            <a href="index.html">홈</a> | 
-            <a href="about.html">센터소개</a> | 
-            <a href="teachers.html">강사소개</a> | 
-            <a href="curriculum.html">교육과정</a> | 
-            <a href="gallery.html">교육사진</a> | 
+            <a href="index.html">홈</a>
+            <a href="about.html">센터소개</a>
+            <a href="teachers.html">강사소개</a>
+            <a href="curriculum.html">교육과정</a>
+            <a href="gallery.html" class="active">교육사진</a>
             <a href="contact.html">문의하기</a>
         </nav>
     </header>
-    <hr>
-    
-    <main>
-        <h2>이곳에 페이지 제목을 쓰세요</h2>
-        <p>내용을 입력하세요.</p>
-    </main>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 SafenEdu. All rights reserved.</p>
-    </footer>
+    <div class="title-section">
+        <h1 class="main-title">생명을 지키는 실전 교육 현장</h1>
+        <p class="sub-title">예고 없는 위기의 순간, 또 다른 생명을 살려낼 준비를 위한 여러분의 노력을 응원합니다 !</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="photo-item">
+            <img src="edu_photo1.jpg" alt="교육 현장 사진 1">
+        </div>
+        <div class="photo-item">
+            <img src="edu_photo2.jpg" alt="교육 현장 사진 2">
+        </div>
+        <div class="photo-item">
+            <img src="edu_photo3.jpg" alt="교육 현장 사진 3">
+        </div>
+        <div class="photo-item">
+            <img src="edu_photo4.jpg" alt="교육 현장 사진 4">
+        </div>
+    </div>
+
 </body>
 </html>
