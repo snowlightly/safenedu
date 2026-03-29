@@ -9,7 +9,7 @@
         * { box-sizing: border-box; }
         body, html { margin: 0; padding: 0; width: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; line-height: 1.6; background-color: #fff; overflow-x: hidden; }
         
-        /* 헤더 */
+        /* 헤더: 로고만 배치 */
         header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
@@ -18,7 +18,7 @@
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
         nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
 
-        /* 상단 배너: 배경색을 #333으로 통일 */
+        /* 상단 배너: 배경색 #333으로 고정 (이미지 없이 구현) */
         .page-banner { 
             height: 300px; 
             background-color: #333; 
@@ -28,7 +28,7 @@
             flex-shrink: 0; 
         }
         
-        /* 제목 박스 스타일 통일 */
+        /* 제목 박스 스타일: 센터소개/강사소개와 통일 */
         .banner-title-box { 
             background-color: rgba(0, 0, 0, 0.8); 
             color: white; 
@@ -43,22 +43,3 @@
         .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
         
         /* 교육 항목 레이아웃 */
-        .edu-item { display: flex; align-items: center; padding: 50px 0; border-bottom: 1px solid #eee; gap: 60px; }
-        .edu-item:last-child { border-bottom: none; }
-        
-        .edu-img { flex: 0 0 400px; text-align: center; }
-        .edu-img img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #f0f0f0; }
-        
-        .edu-info { flex: 1; }
-        .edu-title { font-size: 26px; font-weight: bold; margin-bottom: 25px; border-bottom: 2px solid #333; display: inline-block; padding-bottom: 5px; }
-        
-        .edu-detail { list-style: none; padding: 0; margin: 0; font-size: 18px; }
-        .edu-detail li { margin-bottom: 10px; display: flex; align-items: flex-start; }
-        .edu-detail b { font-weight: bold; color: #000; width: 95px; flex-shrink: 0; }
-        .detail-text { flex: 1; word-break: keep-all; }
-
-        /* 반응형 */
-        @media (max-width: 900px) {
-            .page-banner { height: 200px; }
-            .banner-title-box { font-size: 30px; padding: 10px 30px; }
-            .edu-item { flex-direction:
