@@ -2,36 +2,87 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>세이프N교육센터 - 홈</title>
-    <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; overflow: hidden; display: flex; flex-direction: column; }
-        nav { height: 70px; display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
-        nav a { text-decoration: none; color: black; font-weight: bold; font-size: 22px; margin: 0 20px; }
+    
+    <meta name="description" content="세이프N교육센터 - 1급 응급구조사 전문 운영. 학교안전교육 7대 표준교육, 생애주기별 6대 안전교육, 산업체 안전교육 현장 실전 중심 전문 교육">
+    <meta name="keywords" content="세이프N교육센터, 응급처치교육, 심폐소생술강의, 학교안전교육, 7대표준안전교육, 산업체안전교육, 찾아가는안전교육, 1급응급구조사">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="세이프N교육센터">
+    <meta property="og:description" content="생명을 지키는 교육, 응급처치는 선택이 아닌 필수입니다.">
+    <meta property="og:image" content="https://계정이름.github.io/저장소이름/Logo_R1.png"> <meta property="og:url" content="https://계정이름.github.io/저장소이름/"> <style>
+        /* 기본 설정 */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; display: flex; flex-direction: column; overflow-x: hidden; }
+
+        /* 상단 헤더 (로고 + 메뉴) */
+        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
+        
+        /* 로고 영역 */
+        .logo-area { display: flex; align-items: center; text-decoration: none; color: black; }
+        .logo-area img { height: 60px; margin-right: 15px; } /* 로고 높이 조절 */
+        .logo-text { font-size: 20px; font-weight: bold; line-height: 1.2; }
+        .logo-subtext { font-size: 12px; font-weight: normal; color: #666; }
+
+        /* 네비게이션 메뉴 */
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
+        
+        /* 현재 페이지 표시 (홈에 언더라인) */
+        nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 2px; background-color: black; }
+
+        /* 메인 배너 이미지 영역 */
         .banner-container { flex: 1; display: flex; justify-content: center; align-items: center; overflow: hidden; }
         .main-banner { max-width: 100%; max-height: 100%; object-fit: contain; }
-        .education-section { height: 120px; display: flex; justify-content: center; align-items: center; gap: 30px; background-color: #f9f9f9; flex-shrink: 0; border-top: 1px solid #eee; }
-        .education-text { font-weight: bold; font-size: 36px; color: #333; margin: 0; white-space: nowrap; }
-        .divider { font-size: 30px; color: #ccc; }
+
+        /* 하단 교육 문구 섹션 */
+        .education-section { height: 120px; display: flex; justify-content: center; align-items: center; background-color: #f2f2f2; flex-shrink: 0; border-top: 1px solid #eee; padding: 0 20px; }
+        
+        /* 로봇 수집용 실제 텍스트 */
+        .education-text { font-weight: bold; font-size: 28px; color: #333; margin: 0; text-align: center; word-break: keep-all; }
+
+        /* 반응형 설정 (화면이 작아질 때) */
+        @media (max-width: 1024px) {
+            header { padding: 0 20px; }
+            nav a { font-size: 16px; gap: 15px; }
+            .education-text { font-size: 20px; }
+        }
+        @media (max-width: 768px) {
+            nav { gap: 10px; }
+            nav a { font-size: 14px; }
+            .logo-text { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">홈</a>
-        <a href="about.html">센터소개</a>
-        <a href="teachers.html">강사소개</a>
-        <a href="curriculum.html">교육과정</a>
-        <a href="gallery.html">교육사진</a>
-        <a href="contact.html">문의하기</a>
-    </nav>
+    
+    <header>
+        <a href="index.html" class="logo-area">
+            <img src="Logo_R1.png" alt="세이프N교육센터 로고">
+            <div class="logo-text">
+                세이프N교육센터<br>
+                <span class="logo-subtext">Safe N Education Center</span>
+            </div>
+        </a>
+        
+        <nav>
+            <a href="index.html" class="active">홈</a>
+            <a href="about.html">센터소개</a>
+            <a href="teachers.html">강사소개</a>
+            <a href="curriculum.html">교육과정</a>
+            <a href="gallery.html">교육사진</a>
+            <a href="contact.html">문의하기</a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/search--v1.png" alt="검색"></a> </nav>
+    </header>
+
     <div class="banner-container">
-        <img src="Banner_R1.png" alt="메인 배너" class="main-banner">
+        <img src="Banner_R1.png" alt="세이프N교육센터 메인 배너 - 응급처치 심폐소생술 전문 교육">
     </div>
+
     <div class="education-section">
-        <p class="education-text">학교안전교육 7대 표준교육</p>
-        <span class="divider">|</span>
-        <p class="education-text">생애주기별 6대 안전교육</p>
-        <span class="divider">|</span>
-        <p class="education-text">산업체 안전교육</p>
+        <h2 class="education-text">학교안전교육 7대 표준교육 / 생애주기별 6대 안전교육 / 산업체 안전교육</h2>
     </div>
+
 </body>
 </html>
