@@ -6,23 +6,22 @@
     <title>세이프N교육센터 - 센터소개</title>
     <style>
         /* 기본 설정 */
-        body, html { margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; line-height: 1.8; color: #333; }
+        body, html { margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; line-height: 1.8; color: #333; background-color: #fff; }
 
-        /* 헤더 (메인과 동일 유지) */
+        /* 헤더 (메인과 동일) */
         header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; }
         .logo-area { display: flex; align-items: center; text-decoration: none; color: black; }
-        .logo-area img { height: 60px; margin-right: 15px; }
+        .logo-area img { height: 55px; margin-right: 15px; }
         .logo-text { font-size: 20px; font-weight: bold; line-height: 1.2; }
         .logo-subtext { font-size: 12px; font-weight: normal; color: #666; }
 
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
-        /* 현재 페이지 활성화 */
         nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
 
-        /* 상단 센터소개 배너 영역 */
+        /* 상단 배너 섹션 */
         .intro-banner {
-            height: 350px; /* 이미지 높이 */
+            height: 350px;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('About_Banner.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
@@ -39,63 +38,5 @@
             letter-spacing: 5px;
         }
 
-        /* 본문 텍스트 섹션 */
-        .content-section {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            word-break: keep-all;
-        }
-
-        .intro-text {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
-
-        .bold-text {
-            font-weight: bold;
-        }
-
-        /* 반응형 설정 */
-        @media (max-width: 768px) {
-            .intro-banner { height: 200px; }
-            .intro-title-box { font-size: 30px; padding: 10px 30px; }
-            .intro-text { font-size: 18px; }
-            header { padding: 0 20px; }
-            nav { gap: 10px; }
-            nav a { font-size: 14px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <a href="index.html" class="logo-area">
-            <img src="Logo_R1.png" alt="세이프N교육센터 로고">
-            <div class="logo-text">세이프N교육센터<br><span class="logo-subtext">Safe N Education Center</span></div>
-        </a>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html" class="active">센터소개</a>
-            <a href="teachers.html">강사소개</a>
-            <a href="curriculum.html">교육과정</a>
-            <a href="gallery.html">교육사진</a>
-            <a href="contact.html">문의하기</a>
-        </nav>
-    </header>
-
-    <div class="intro-banner">
-        <div class="intro-title-box">센터소개</div>
-    </div>
-
-    <section class="content-section">
-        <div class="intro-text">
-            <p>위기의 순간, 올바른 응급처치는 생명을 지키는 가장 확실한 방법입니다.</p>
-            <p>세이프N교육센터는 다수의 현장 경험을 갖춘 <span class="bold-text">1급 응급구조사</span>가 직접 운영하며,</p>
-            <br>
-            <p>실제 응급상황에서 즉시 적용할 수 있는 실전 중심의 교육을 제공합니다.</p>
-            <br>
-            <p>응급상황은 예고 없이 찾아오지만, 준비된 대응은 그 결과를 바꿉니다.</p>
-            <br>
-            <p>응급처치는 전문가만의 기술이 아닌, 누구나
+        /* 본문 텍스트 섹션 (잘림 방지를 위해 min-height 설정) */
+        .content-section
