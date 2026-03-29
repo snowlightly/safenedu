@@ -5,79 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세이프N교육센터 - 교육과정</title>
     <style>
-        /* 기본 설정 */
         * { box-sizing: border-box; }
-        body, html { margin: 0; padding: 0; width: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; line-height: 1.6; background-color: #fff; }
-        
-        /* 상단 헤더: 로고만 배치 */
+        body, html { margin: 0; padding: 0; width: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; line-height: 1.6; }
         header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
-
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
         nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
-
-        /* 상단 배너 */
-        .page-banner {
-            height: 300px;
-            background: #555 url('Curri_Banner.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex; justify-content: center; align-items: center;
-        }
-        .banner-title { background: black; color: white; padding: 10px 50px; font-size: 40px; font-weight: bold; letter-spacing: 3px; }
-
-        /* 컨텐츠 섹션 */
+        .page-banner { height: 300px; background: #444 url('Curri_Banner.jpg') no-repeat center center; background-size: cover; display: flex; justify-content: center; align-items: center; }
+        .banner-title-box { background-color: rgba(0, 0, 0, 0.8); color: white; padding: 15px 60px; font-size: 40px; font-weight: bold; letter-spacing: 3px; }
         .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-        
-        /* 교육 항목 레이아웃 */
         .edu-item { display: flex; align-items: center; padding: 50px 0; border-bottom: 1px solid #eee; gap: 60px; }
         .edu-item:last-child { border-bottom: none; }
-        
         .edu-img { flex: 0 0 400px; text-align: center; }
         .edu-img img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #f0f0f0; }
-        
         .edu-info { flex: 1; }
         .edu-title { font-size: 26px; font-weight: bold; margin-bottom: 25px; border-bottom: 2px solid #333; display: inline-block; padding-bottom: 5px; }
-        
         .edu-detail { list-style: none; padding: 0; margin: 0; font-size: 18px; }
         .edu-detail li { margin-bottom: 10px; display: flex; align-items: flex-start; }
         .edu-detail b { font-weight: bold; color: #000; width: 95px; flex-shrink: 0; }
         .detail-text { flex: 1; word-break: keep-all; }
-
-        /* 반응형 */
-        @media (max-width: 900px) {
-            .edu-item { flex-direction: column; text-align: center; gap: 30px; }
-            .edu-img { flex: none; width: 100%; max-width: 400px; }
-            .edu-detail li { justify-content: center; text-align: left; }
-            header { padding: 0 20px; }
-            nav a { font-size: 14px; gap: 10px; }
-        }
+        @media (max-width: 900px) { .edu-item { flex-direction: column; text-align: center; gap: 30px; } .edu-img { flex: none; width: 100%; max-width: 400px; } .edu-detail li { justify-content: center; text-align: left; } header { padding: 0 20px; } nav a { font-size: 14px; gap: 10px; } }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="index.html" class="logo-area">
-            <img src="Logo.png" alt="세이프N교육센터 로고">
-        </a>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">센터소개</a>
-            <a href="teachers.html">강사소개</a>
-            <a href="curriculum.html" class="active">교육과정</a>
-            <a href="gallery.html">교육사진</a>
-            <a href="contact.html">문의하기</a>
-        </nav>
+        <a href="index.html" class="logo-area"><img src="Logo.png" alt="로고"></a>
+        <nav><a href="index.html">홈</a><a href="about.html">센터소개</a><a href="teachers.html">강사소개</a><a href="curriculum.html" class="active">교육과정</a><a href="gallery.html">교육사진</a><a href="contact.html">문의하기</a></nav>
     </header>
-
-    <div class="page-banner">
-        <div class="banner-title">교육과정</div>
-    </div>
-
+    <div class="page-banner"><div class="banner-title-box">교육과정</div></div>
     <div class="container">
         <div class="edu-item">
-            <div class="edu-img"><img src="Cur1.png" alt="기관 기업 교육"></div>
+            <div class="edu-img"><img src="Cur1.png" alt="교육1" onerror="this.src='Cur1.jpg'"></div>
             <div class="edu-info">
                 <h3 class="edu-title">기관&기업 출강 응급처치 및 심폐소생술 교육</h3>
                 <ul class="edu-detail">
@@ -88,60 +48,34 @@
                 </ul>
             </div>
         </div>
-
         <div class="edu-item">
-            <div class="edu-img"><img src="Cur2.png" alt="교직원 교육"></div>
+            <div class="edu-img"><img src="Cur2.png" alt="교육2" onerror="this.src='Cur2.jpg'"></div>
             <div class="edu-info">
                 <h3 class="edu-title">교직원 심폐소생술 교육</h3>
-                <ul class="edu-detail">
-                    <li><b>· 교육대상</b> <span class="detail-text">기업체 소속 전 임직원 등</span></li>
-                    <li><b>· 교육시간</b> <span class="detail-text">1~2시간 (이론 및 실습 병행)</span></li>
-                    <li><b>· 교육내용</b> <span class="detail-text">심폐소생술·자동심장충격기·응급처치법</span></li>
-                    <li><b>· 교육형태</b> <span class="detail-text">출강 강의 운영</span></li>
-                </ul>
+                <ul class="edu-detail"><li><b>· 교육대상</b> <span class="detail-text">교직원 등</span></li><li><b>· 교육시간</b> <span class="detail-text">1~2시간</span></li><li><b>· 교육내용</b> <span class="detail-text">심폐소생술 등</span></li><li><b>· 교육형태</b> <span class="detail-text">출강</span></li></ul>
             </div>
         </div>
-
         <div class="edu-item">
-            <div class="edu-img"><img src="Cur3.png" alt="예비교원 교육"></div>
+            <div class="edu-img"><img src="Cur3.png" alt="교육3" onerror="this.src='Cur3.jpg'"></div>
             <div class="edu-info">
                 <h3 class="edu-title">예비교원 응급처치·심폐소생술 교육</h3>
-                <ul class="edu-detail">
-                    <li><b>· 교육대상</b> <span class="detail-text">교육대학·사범대학 졸업 예정 대상자(예비교원) 등</span></li>
-                    <li><b>· 교육시간</b> <span class="detail-text">2시간 (이론 실습 병행)</span></li>
-                    <li><b>· 관련법령</b> <span class="detail-text">교원자격검정령 대통령령 제19조 제3항 [별표1] 제4호</span></li>
-                    <li><b>· 교육형태</b> <span class="detail-text">출강 강의 운영</span></li>
-                    <li><b>· 강사자격</b> <span class="detail-text">교원자격검정령 대통령령 제19조 제3항 [별표1] 제4호 응급처치 교육의 계획·내용 및 시간 등</span></li>
-                </ul>
+                <ul class="edu-detail"><li><b>· 교육대상</b> <span class="detail-text">사범대 졸업 예정자 등</span></li><li><b>· 교육시간</b> <span class="detail-text">2시간</span></li><li><b>· 관련법령</b> <span class="detail-text">교원자격검정령</span></li></ul>
             </div>
         </div>
-
         <div class="edu-item">
-            <div class="edu-img"><img src="Cur4.png" alt="학생 교육"></div>
+            <div class="edu-img"><img src="Cur4.png" alt="교육4" onerror="this.src='Cur4.jpg'"></div>
             <div class="edu-info">
                 <h3 class="edu-title">학생 심폐소생술 교육</h3>
-                <ul class="edu-detail">
-                    <li><b>· 교육대상</b> <span class="detail-text">유·초·중·고등학교 학생</span></li>
-                    <li><b>· 교육시간</b> <span class="detail-text">1~2시간 (이론 및 실습 병행)</span></li>
-                    <li><b>· 교육내용</b> <span class="detail-text">심폐소생술·자동심장충격기·응급처치법</span></li>
-                    <li><b>· 교육형태</b> <span class="detail-text">출강 강의 운영(강당 or 각반)</span></li>
-                </ul>
+                <ul class="edu-detail"><li><b>· 교육대상</b> <span class="detail-text">초중고 학생</span></li><li><b>· 교육시간</b> <span class="detail-text">1~2시간</span></li></ul>
             </div>
         </div>
-
         <div class="edu-item">
-            <div class="edu-img"><img src="Cur5.png" alt="일반인 교육"></div>
+            <div class="edu-img"><img src="Cur5.png" alt="교육5" onerror="this.src='Cur5.jpg'"></div>
             <div class="edu-info">
                 <h3 class="edu-title">일반인 심폐소생술&응급처치 교육</h3>
-                <ul class="edu-detail">
-                    <li><b>· 교육대상</b> <span class="detail-text">모든 국민</span></li>
-                    <li><b>· 교육시간</b> <span class="detail-text">2시간 (이론 및 실습 병행)</span></li>
-                    <li><b>· 교육내용</b> <span class="detail-text">심폐소생술·자동심장충격기·응급처치법</span></li>
-                    <li><b>· 교육형태</b> <span class="detail-text">출강 강의 운영</span></li>
-                </ul>
+                <ul class="edu-detail"><li><b>· 교육대상</b> <span class="detail-text">모든 국민</span></li><li><b>· 교육시간</b> <span class="detail-text">2시간</span></li></ul>
             </div>
         </div>
     </div>
-
 </body>
 </html>
