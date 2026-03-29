@@ -34,17 +34,17 @@
             width: 100%; height: 3px; background-color: black; 
         }
 
-        /* 상단 배너: 배경색 #333 및 스타일 통일 */
+        /* 상단 배너: 이미지 경로를 지우고 배경색 #333으로 고정 */
         .page-banner {
             height: 300px;
-            background-color: #333; /* 다른 페이지와 동일한 어두운 회색 */
+            background-color: #333; /* 강사소개/교육과정과 동일한 색상 */
             display: flex; 
             justify-content: center; 
             align-items: center;
             flex-shrink: 0;
         }
 
-        /* 제목 박스 스타일 통일 */
+        /* 제목 박스 스타일: 모든 페이지 통일 */
         .banner-title-box {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
@@ -57,24 +57,25 @@
 
         /* 본문 텍스트 섹션 */
         .content-section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             max-width: 1100px;
             margin: 0 auto;
             flex: 1;
         }
 
+        /* 인삿말 스타일: 자간 축소 및 폰트 크기 24px */
         .intro-text {
             font-size: 24px;
             color: #333;
-            letter-spacing: -0.5px; /* 요청하신 자간 축소 적용 */
+            letter-spacing: -1px; /* 자간을 더 좁게 조절 */
             word-break: keep-all;
             line-height: 1.6;
         }
 
-        .intro-text p { margin: 10px 0; }
-        .bold-text { font-weight: bold; }
-        .margin-v { margin: 25px 0; }
+        .intro-text p { margin: 12px 0; }
+        .bold-text { font-weight: bold; } /* 굵게 표시용 */
+        .margin-v { margin: 30px 0; } /* 문단 사이 여백 */
 
         /* 반응형 */
         @media (max-width: 768px) {
