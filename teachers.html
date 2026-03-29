@@ -5,129 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세이프N교육센터 - 강사소개</title>
     <style>
-        /* 기본 설정 */
+        * { box-sizing: border-box; }
         body, html { margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; line-height: 1.6; color: #333; }
-
-        /* 상단 헤더: 로고 옆 텍스트 제거 */
-        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
-        
+        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
-
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
         nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
-
-        /* 상단 강사소개 배너: 배경 이미지가 있다면 Teacher_Banner.jpg 업로드 필수 */
-        .teacher-banner {
-            height: 300px;
-            background: #f4f4f4 url('Teacher_Banner.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .banner-title-box {
-            background-color: black;
-            color: white;
-            padding: 10px 50px;
-            font-size: 40px;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        /* 중앙 컨텐츠 영역 */
+        .page-banner { height: 300px; background: #444 url('Teacher_Banner.jpg') no-repeat center center; background-size: cover; display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
+        .banner-title-box { background-color: rgba(0, 0, 0, 0.8); color: white; padding: 15px 60px; font-size: 40px; font-weight: bold; letter-spacing: 3px; }
         .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-
-        /* 자격사항 섹션 (좌우 분할) */
         .qualification-wrapper { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
-        
-        /* 명함 이미지 영역 */
         .card-img { flex: 0 0 450px; } 
-        .card-img img { 
-            width: 100%; 
-            height: auto;
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-            display: block; /* 엑박 방지용 */
-        }
-        
-        .text-content { flex: 1; }
+        .card-img img { width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; box-shadow: 2px 2px 10px rgba(0,0,0,0.05); }
         .section-title { font-size: 28px; font-weight: bold; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
         .list-style { list-style: none; padding: 0; font-size: 18px; }
         .list-style li { margin-bottom: 8px; position: relative; padding-left: 20px; }
         .list-style li::before { content: '■'; position: absolute; left: 0; font-size: 14px; top: 2px; }
-
-        /* 경력 섹션 */
-        .career-section { margin-top: 50px; }
-
-        /* 반응형 */
-        @media (max-width: 900px) {
-            .qualification-wrapper { flex-direction: column; align-items: center; }
-            .card-img { flex: none; width: 100%; max-width: 450px; }
-            header { padding: 0 20px; }
-            nav a { font-size: 14px; gap: 10px; }
-        }
+        @media (max-width: 900px) { .qualification-wrapper { flex-direction: column; align-items: center; } .card-img { flex: none; width: 100%; max-width: 450px; } header { padding: 0 20px; } nav a { font-size: 14px; gap: 10px; } }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="index.html" class="logo-area">
-            <img src="Logo.png" alt="세이프N교육센터 로고">
-        </a>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">센터소개</a>
-            <a href="teachers.html" class="active">강사소개</a>
-            <a href="curriculum.html">교육과정</a>
-            <a href="gallery.html">교육사진</a>
-            <a href="contact.html">문의하기</a>
-        </nav>
+        <a href="index.html" class="logo-area"><img src="Logo.png" alt="로고"></a>
+        <nav><a href="index.html">홈</a><a href="about.html">센터소개</a><a href="teachers.html" class="active">강사소개</a><a href="curriculum.html">교육과정</a><a href="gallery.html">교육사진</a><a href="contact.html">문의하기</a></nav>
     </header>
-
-    <div class="teacher-banner">
-        <div class="banner-title-box">강사소개</div>
-    </div>
-
+    <div class="page-banner"><div class="banner-title-box">강사소개</div></div>
     <div class="container">
         <div class="qualification-wrapper">
-            <div class="card-img">
-                <img src="Card_R2.png" alt="강사 명함 이미지">
-            </div>
+            <div class="card-img"><img src="Card_R2.png" alt="명함"></div>
             <div class="text-content">
                 <h2 class="section-title">자격사항</h2>
-                <ul class="list-style">
-                    <li>1급 응급구조사</li>
-                    <li>BLS Instructor (AHA)</li>
-                    <li>어린이·청소년 금연교육 전문강사(한신교육연구소)</li>
-                    <li>디지털범죄예방관리사(한신교육연구소)</li>
-                    <li>청소년안전지도관리사(한신교육연구소)</li>
-                    <li>전문응급처치강사(대한응급구조사협회)</li>
-                </ul>
+                <ul class="list-style"><li>1급 응급구조사</li><li>BLS Instructor (AHA)</li><li>어린이·청소년 금연교육 전문강사</li><li>디지털범죄예방관리사</li><li>청소년안전지도관리사</li><li>전문응급처치강사(대한응급구조사협회)</li></ul>
             </div>
         </div>
-
         <div class="career-section">
             <h2 class="section-title">경력 및 활동내역</h2>
-            <ul class="list-style">
-                <li>현) 세이프N교육센터 센터장</li>
-                <li>현) 대한응급구조사협회 전문강사</li>
-                <li>현) 한국보건복지인력개발원 경인 사회복무교육센터 재난/응급처치 강사</li>
-                <li>현) 행정안전부 안전교육 전문인력</li>
-                <li>현) 학교안전공제중앙회 학교안전교육 전문강사</li>
-                <li>현) 서울시교육청보건안전진흥원</li>
-                <li>전) 아주대학교병원 응급의료센터</li>
-                <li>전) 삼성전자</li>
-                <li>전) 태안보건의료원</li>
-                <li>전) 베스트씨피알(라이프온교육센터)</li>
-                <li>전) 안전한사회</li>
-                <li>전) 동남보건대학교 응급구조과 강사</li>
-                <li>전국 초·중·고, 교육지원청, 육아종합지원센터, 인구보건복지협회, 공공기관, 기업, 군부대 등 다수 출강</li>
-            </ul>
+            <ul class="list-style"><li>현) 세이프N교육센터 센터장</li><li>현) 대한응급구조사협회 전문강사</li><li>현) 행정안전부 안전교육 전문인력</li><li>전) 아주대학교병원 응급의료센터</li><li>전) 삼성전자</li><li>전국 초·중·고 등 다수 출강</li></ul>
         </div>
     </div>
-
 </body>
 </html>
