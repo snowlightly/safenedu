@@ -3,32 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafenEdu - 안전교육 전문</title>
-    <meta name="naver-site-verification" content="1bf4ef1fb21813f869f52022a9bfb927428c5216" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+    <title>세이프N교육센터 - 문의하기</title>
+    <style>
+        /* 기본 설정 */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; display: flex; flex-direction: column; background-color: #fff; }
+
+        /* 헤더: 로고만 배치 */
+        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { height: 60px; display: block; }
+
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
+        nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
+
+        /* 메인 컨텐츠 영역 */
+        .contact-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 신청서 아이콘 이미지 */
+        .form-icon {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* 교육신청서 링크 텍스트 */
+        .form-link {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .form-link:hover {
+            color: #555;
+        }
+
+        /* 하단 안내 문구 */
+        .info-text {
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            header { padding: 0 20px; }
+            nav a { font-size: 14px; gap: 10px; }
+            .form-link { font-size: 24px; }
+            .info-text { font-size: 16px; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>SafenEdu</h1>
+        <a href="index.html" class="logo-area">
+            <img src="Logo.png" alt="세이프N교육센터 로고">
+        </a>
         <nav>
-            <a href="index.html">홈</a> | 
-            <a href="about.html">센터소개</a> | 
-            <a href="teachers.html">강사소개</a> | 
-            <a href="curriculum.html">교육과정</a> | 
-            <a href="gallery.html">교육사진</a> | 
-            <a href="contact.html">문의하기</a>
+            <a href="index.html">홈</a>
+            <a href="about.html">센터소개</a>
+            <a href="teachers.html">강사소개</a>
+            <a href="curriculum.html">교육과정</a>
+            <a href="gallery.html">교육사진</a>
+            <a href="contact.html" class="active">문의하기</a>
         </nav>
     </header>
-    <hr>
-    
-    <main>
-        <h2>이곳에 페이지 제목을 쓰세요</h2>
-        <p>내용을 입력하세요.</p>
+
+    <main class="contact-container">
+        <img src="Registration.png" alt="교육신청서 아이콘" class="form-icon">
+
+        <a href="https://forms.gle/본인의폼주소" target="_blank" class="form-link">교육신청서(폼)</a>
+
+        <p class="info-text">빠른 시일 내 확인 후 연락드리겠습니다</p>
     </main>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 SafenEdu. All rights reserved.</p>
-    </footer>
 </body>
 </html>
