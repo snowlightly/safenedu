@@ -6,16 +6,31 @@
     <title>세이프N교육센터 - 문의하기</title>
     <style>
         /* 기본 설정 */
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; display: flex; flex-direction: column; background-color: #fff; }
+        * { box-sizing: border-box; }
+        body, html { 
+            margin: 0; padding: 0; 
+            width: 100%; height: 100%; 
+            font-family: "Malgun Gothic", "맑은 고딕", sans-serif; 
+            display: flex; flex-direction: column; 
+            background-color: #fff; 
+        }
 
-        /* 헤더: 로고만 배치 */
-        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
+        /* 상단 헤더: 로고만 배치 (텍스트 제거 버전) */
+        header { 
+            height: 80px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 40px; border-bottom: 1px solid #eee; 
+            background: white; flex-shrink: 0; 
+        }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
 
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
-        nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 3px; background-color: black; }
+        nav a.active::after { 
+            content: ''; position: absolute; left: 0; bottom: -5px; 
+            width: 100%; height: 3px; background-color: black; 
+        }
 
         /* 메인 컨텐츠 영역 */
         .contact-container {
@@ -28,7 +43,7 @@
             text-align: center;
         }
 
-        /* 신청서 아이콘 이미지 */
+        /* 신청서 아이콘 이미지: Form.png */
         .form-icon {
             max-width: 500px;
             width: 100%;
@@ -43,7 +58,7 @@
             color: #000;
             text-decoration: underline;
             margin-bottom: 20px;
-            cursor: pointer;
+            transition: color 0.2s;
         }
 
         .form-link:hover {
@@ -54,6 +69,7 @@
         .info-text {
             font-size: 20px;
             color: #333;
+            letter-spacing: -0.5px;
         }
 
         /* 반응형 */
@@ -82,9 +98,13 @@
     </header>
 
     <main class="contact-container">
-        <img src="Registration.png" alt="교육신청서 아이콘" class="form-icon">
+        <img src="Form.png" alt="교육신청서 아이콘" class="form-icon">
 
-        <a href="https://forms.gle/본인의폼주소" target="_blank" class="form-link">교육신청서(폼)</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaBrS-KZii8Ud6vrqba5IcEGe3HHlQkpRFbk9DHsALC_lNKg/viewform" 
+           target="_blank" 
+           class="form-link">
+           교육신청서(폼)
+        </a>
 
         <p class="info-text">빠른 시일 내 확인 후 연락드리겠습니다</p>
     </main>
