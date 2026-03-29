@@ -6,11 +6,11 @@
     <title>세이프N교육센터 - 교육과정</title>
     <style>
         /* 기본 설정 */
-        body, html { margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; line-height: 1.6; }
+        * { box-sizing: border-box; }
+        body, html { margin: 0; padding: 0; width: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; color: #333; line-height: 1.6; background-color: #fff; }
         
         /* 상단 헤더: 로고만 배치 */
         header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
-        
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
 
@@ -21,7 +21,7 @@
         /* 상단 배너 */
         .page-banner {
             height: 300px;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('Curri_Banner.jpg') no-repeat center center;
+            background: #555 url('Curri_Banner.jpg') no-repeat center center;
             background-size: cover;
             display: flex; justify-content: center; align-items: center;
         }
@@ -35,22 +35,21 @@
         .edu-item:last-child { border-bottom: none; }
         
         .edu-img { flex: 0 0 400px; text-align: center; }
-        .edu-img img { width: 100%; height: auto; border-radius: 8px; }
+        .edu-img img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #f0f0f0; }
         
         .edu-info { flex: 1; }
         .edu-title { font-size: 26px; font-weight: bold; margin-bottom: 25px; border-bottom: 2px solid #333; display: inline-block; padding-bottom: 5px; }
         
         .edu-detail { list-style: none; padding: 0; margin: 0; font-size: 18px; }
         .edu-detail li { margin-bottom: 10px; display: flex; align-items: flex-start; }
-        .edu-detail b { font-weight: bold; color: #000; width: 90px; flex-shrink: 0; }
-        .detail-text { flex: 1; }
+        .edu-detail b { font-weight: bold; color: #000; width: 95px; flex-shrink: 0; }
+        .detail-text { flex: 1; word-break: keep-all; }
 
         /* 반응형 */
         @media (max-width: 900px) {
             .edu-item { flex-direction: column; text-align: center; gap: 30px; }
             .edu-img { flex: none; width: 100%; max-width: 400px; }
-            .edu-detail li { justify-content: center; }
-            .edu-detail b { width: auto; margin-right: 10px; }
+            .edu-detail li { justify-content: center; text-align: left; }
             header { padding: 0 20px; }
             nav a { font-size: 14px; gap: 10px; }
         }
@@ -78,7 +77,7 @@
 
     <div class="container">
         <div class="edu-item">
-            <div class="edu-img"><img src="edu_1.png" alt="기관 기업 교육"></div>
+            <div class="edu-img"><img src="Cur1.png" alt="기관 기업 교육"></div>
             <div class="edu-info">
                 <h3 class="edu-title">기관&기업 출강 응급처치 및 심폐소생술 교육</h3>
                 <ul class="edu-detail">
@@ -91,7 +90,7 @@
         </div>
 
         <div class="edu-item">
-            <div class="edu-img"><img src="edu_2.png" alt="교직원 교육"></div>
+            <div class="edu-img"><img src="Cur2.png" alt="교직원 교육"></div>
             <div class="edu-info">
                 <h3 class="edu-title">교직원 심폐소생술 교육</h3>
                 <ul class="edu-detail">
@@ -104,7 +103,7 @@
         </div>
 
         <div class="edu-item">
-            <div class="edu-img"><img src="edu_3.png" alt="예비교원 교육"></div>
+            <div class="edu-img"><img src="Cur3.png" alt="예비교원 교육"></div>
             <div class="edu-info">
                 <h3 class="edu-title">예비교원 응급처치·심폐소생술 교육</h3>
                 <ul class="edu-detail">
@@ -118,7 +117,7 @@
         </div>
 
         <div class="edu-item">
-            <div class="edu-img"><img src="edu_4.png" alt="학생 교육"></div>
+            <div class="edu-img"><img src="Cur4.png" alt="학생 교육"></div>
             <div class="edu-info">
                 <h3 class="edu-title">학생 심폐소생술 교육</h3>
                 <ul class="edu-detail">
@@ -131,7 +130,7 @@
         </div>
 
         <div class="edu-item">
-            <div class="edu-img"><img src="edu_5.png" alt="일반인 교육"></div>
+            <div class="edu-img"><img src="Cur5.png" alt="일반인 교육"></div>
             <div class="edu-info">
                 <h3 class="edu-title">일반인 심폐소생술&응급처치 교육</h3>
                 <ul class="edu-detail">
