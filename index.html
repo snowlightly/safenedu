@@ -9,24 +9,87 @@
     <meta name="keywords" content="세이프N교육센터, 응급처치교육, 심폐소생술강의, 학교안전교육, 7대표준안전교육, 산업체안전교육">
     
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; display: flex; flex-direction: column; overflow-x: hidden; }
+        /* 기본 설정: 최소 높이 확보 */
+        * { box-sizing: border-box; }
+        body, html { 
+            margin: 0; padding: 0; 
+            width: 100%; min-height: 100vh;
+            font-family: "Malgun Gothic", "맑은 고딕", sans-serif; 
+            display: flex; flex-direction: column; 
+            background-color: white;
+        }
 
         /* 상단 헤더 */
-        header { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; border-bottom: 1px solid #eee; background: white; flex-shrink: 0; }
+        header { 
+            height: 80px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 40px; border-bottom: 1px solid #eee; 
+            background: white; flex-shrink: 0; 
+            z-index: 100;
+        }
         
-        /* 로고 영역: 텍스트 제거 및 클릭 범위 최적화 */
         .logo-area { display: flex; align-items: center; text-decoration: none; }
         .logo-area img { height: 60px; display: block; }
 
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { text-decoration: none; color: black; font-weight: bold; font-size: 18px; position: relative; }
-        nav a.active::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 2px; background-color: black; }
+        nav a.active::after { 
+            content: ''; position: absolute; left: 0; bottom: -5px; 
+            width: 100%; height: 2px; background-color: black; 
+        }
 
-        /* 메인 배너: Main.png 사용 */
-        .banner-container { flex: 1; display: flex; justify-content: center; align-items: center; overflow: hidden; background-color: #fff; }
+        /* 메인 배너 영역: 화면 높이에 맞춰 자동 조절 */
+        .banner-container { 
+            flex: 1; 
+            display: flex; justify-content: center; align-items: center; 
+            background-color: #fff;
+            min-height: 400px; /* 최소 높이 보장 */
+            overflow: hidden;
+        }
+        
         .main-banner { 
             max-width: 100%; 
-            max-height: 100%; 
+            max-height: calc(100vh - 200px); /* 헤더와 하단 영역 제외한 높이 */
             object-fit: contain; 
             display: block;
-            image-rendering: -webkit
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        /* 하단 문구 섹션 */
+        .education-section { 
+            height: 120px; 
+            display: flex; justify-content: center; align-items: center; 
+            background-color: #f2f2f2; 
+            flex-shrink: 0; border-top: 1px solid #eee; 
+        }
+        .education-text { 
+            font-weight: bold; font-size: 28px; color: #333; 
+            margin: 0; text-align: center; 
+        }
+
+        /* 반응형 */
+        @media (max-width: 1024px) {
+            header { padding: 0 20px; }
+            nav a { font-size: 16px; gap: 15px; }
+            .education-text { font-size: 20px; }
+            .education-section { height: 80px; }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html" class="logo-area">
+            <img src="Logo.png" alt="세이프N교육센터 로고">
+        </a>
+        <nav>
+            <a href="index.html" class="active">홈</a>
+            <a href="about.html">센터소개</a>
+            <a href="teachers.html">강사소개</a>
+            <a href="curriculum.html">교육과정</a>
+            <a href="gallery.html">교육사진</a>
+            <a href="contact.html">문의하기</a>
+        </nav>
+    </header>
+
+    <main class="banner-container">
