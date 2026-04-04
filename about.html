@@ -30,9 +30,12 @@
 
         .content-section { padding: 80px 20px; text-align: center; max-width: 900px; margin: 0 auto; flex: 1; }
         .intro-text { font-size: 19px; color: #444; letter-spacing: -0.5px; word-break: keep-all; line-height: 1.8; }
-        .intro-text p { margin: 15px 0; }
+        
+        /* 문장 간격 조정 */
+        .intro-text p { margin: 10px 0; } 
+        .intro-text .space-p { margin-top: 30px; } /* 문단이 바뀔 때만 약간의 여백 주기 */
+        
         .bold-text { font-weight: bold; color: #000; }
-        .margin-v { margin: 35px 0; width: 40px; border-top: 2px solid #ddd; display: inline-block; }
 
         @media (max-width: 768px) {
             .page-banner { height: 200px; }
@@ -68,19 +71,13 @@
             <p>세이프N교육센터는 다수의 현장 경험을 갖춘 <span class="bold-text">1급 응급구조사</span>가 직접 운영하며,</p>
             <p>실제 응급상황에서 즉시 적용할 수 있는 실전 중심의 교육을 제공합니다.</p>
             
-            <div class="margin-v"></div>
-
-            <p>응급상황은 예고 없이 찾아오지만, 준비된 대응은 그 결과를 바꿉니다.</p>
+            <p class="space-p">응급상황은 예고 없이 찾아오지만, 준비된 대응은 그 결과를 바꿉니다.</p>
             <p>응급처치는 전문가만의 기술이 아닌, 누구나 반드시 갖추어야 할 생존의 기본입니다.</p>
             
-            <div class="margin-v"></div>
-
-            <p>생명의 무게를 누구보다 잘 아는 전문가의 시선으로,</p>
+            <p class="space-p">생명의 무게를 누구보다 잘 아는 전문가의 시선으로,</p>
             <p>한 사람의 올바른 행동이 또 다른 생명을 지킬 수 있도록 교육합니다.</p>
             
-            <div class="margin-v"></div>
-
-            <p class="bold-text">응급처치는 선택이 아닌 필수입니다.</p>
+            <p class="space-p bold-text">응급처치는 선택이 아닌 필수입니다.</p>
             <p class="bold-text">생명을 지키는 교육, 그 시작을 이곳에서 함께하십시오.</p>
         </div>
     </section>
