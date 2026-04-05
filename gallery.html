@@ -18,8 +18,7 @@
 
         .page-banner { 
             height: 300px; 
-            /* 배너 배경 이미지 이름은 실제 깃허브에 올린 파일명으로 변경해 */
-            background-image: url('Gallery_Background.jpg'); 
+            background-image: url('pen.png'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -34,10 +33,9 @@
 
         .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
 
-        /* 사진 갤러리 바둑판 배열 (그리드) */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* PC에서는 3칸 */
+            grid-template-columns: repeat(3, 1fr); 
             gap: 30px;
         }
 
@@ -50,13 +48,13 @@
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px); /* 마우스 올리면 살짝 위로 뜸 */
+            transform: translateY(-5px); 
         }
 
         .gallery-img {
             width: 100%;
             height: 250px;
-            object-fit: cover; /* 사진 비율 깨짐 방지 */
+            object-fit: cover; 
             display: block;
         }
 
@@ -86,13 +84,12 @@
             }
             nav a { 
                 font-size: 15px; 
-                white-space: nowrap; /* 글씨 세로 쪼개짐 방지 */
+                white-space: nowrap; 
             }
 
             .page-banner { height: 200px; } 
             .banner-title-box { font-size: 28px; padding: 10px 40px; } 
 
-            /* 모바일에서는 사진을 1칸으로 변경 */
             .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -125,27 +122,22 @@
                 <img src="pic1.jpg" alt="심폐소생술 교육 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+1';">
                 <div class="gallery-caption">기관/기업 심폐소생술 교육</div>
             </div>
-
             <div class="gallery-item">
                 <img src="pic2.jpg" alt="교직원 교육 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+2';">
                 <div class="gallery-caption">교직원 응급처치 교육</div>
             </div>
-
             <div class="gallery-item">
                 <img src="pic3.jpg" alt="학생 교육 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+3';">
                 <div class="gallery-caption">학생 심폐소생술 교육</div>
             </div>
-
             <div class="gallery-item">
                 <img src="pic4.jpg" alt="실습 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+4';">
                 <div class="gallery-caption">자동심장충격기 실습</div>
             </div>
-
             <div class="gallery-item">
                 <img src="pic5.jpg" alt="일반인 교육 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+5';">
                 <div class="gallery-caption">일반인 안전 교육</div>
             </div>
-
             <div class="gallery-item">
                 <img src="pic6.jpg" alt="예비교원 교육 사진" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Image+6';">
                 <div class="gallery-caption">예비교원 실습 과정</div>
