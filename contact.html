@@ -31,74 +31,26 @@
             font-size: 40px; font-weight: bold; letter-spacing: 3px; border: 1px solid rgba(255, 255, 255, 0.3); 
         }
 
-        .content-section { max-width: 800px; margin: 60px auto; padding: 0 20px; flex: 1; text-align: center; width: 100%; }
+        .content-section { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; text-align: center; }
+        
+        .form-link-area { max-width: 700px; width: 100%; margin-bottom: 30px; }
+        .form-link-area img { width: 100%; height: auto; cursor: pointer; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.2s ease-in-out; }
+        .form-link-area img:hover { transform: scale(1.02); }
 
-        /* 교육신청 폼 디자인 */
-        .form-container { 
-            text-align: left; 
-            border: 1px solid #eee; 
-            border-radius: 10px; 
-            padding: 40px; 
-            box-shadow: 2px 2px 15px rgba(0,0,0,0.05); 
-            background-color: #fafafa;
-        }
-        .form-title { font-size: 24px; font-weight: bold; margin-bottom: 30px; text-align: center; color: #111; border-bottom: 2px solid #ddd; padding-bottom: 15px; }
-        
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #333; }
-        .form-group input, .form-group textarea { 
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            font-family: inherit; 
-            font-size: 16px;
-        }
-        .form-group textarea { resize: vertical; min-height: 150px; }
-        
-        .submit-btn { 
-            display: block; 
-            width: 100%; 
-            padding: 15px; 
-            background-color: #333; 
-            color: #fff; 
-            font-size: 18px; 
-            font-weight: bold; 
-            text-align: center; 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            transition: 0.2s; 
-        }
-        .submit-btn:hover { background-color: #000; }
+        .contact-text { font-size: 20px; font-weight: bold; color: #444; margin-top: 20px; }
 
         /* 모바일 최적화 (768px 이하 해상도) */
         @media (max-width: 768px) { 
-            header { 
-                height: auto; 
-                flex-direction: column; 
-                padding: 15px 10px; 
-                gap: 15px; 
-            }
+            header { height: auto; flex-direction: column; padding: 15px 10px; gap: 15px; }
             .logo-area img { height: 45px; }
-            
-            nav { 
-                width: 100%;
-                flex-wrap: wrap; 
-                justify-content: center; 
-                gap: 10px 15px; 
-            }
-            nav a { 
-                font-size: 15px; 
-                white-space: nowrap; 
-            }
+            nav { width: 100%; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
+            nav a { font-size: 15px; white-space: nowrap; }
 
             .page-banner { height: 200px; } 
             .banner-title-box { font-size: 28px; padding: 10px 40px; } 
             
-            .content-section { margin: 40px auto; }
-            .form-container { padding: 20px; }
-            .form-title { font-size: 20px; }
+            .content-section { padding: 40px 20px; }
+            .contact-text { font-size: 16px; }
         }
     </style>
 </head>
@@ -121,38 +73,10 @@
     </div>
 
     <section class="content-section">
-        <div class="form-container">
-            <div class="form-title">교육 문의 및 출강 신청</div>
-            
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="orgName">기관/기업명 (학교명)</label>
-                    <input type="text" id="orgName" name="orgName" placeholder="기관명을 입력해주세요" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="contactName">담당자 성명</label>
-                    <input type="text" id="contactName" name="contactName" placeholder="담당자 성명을 입력해주세요" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">연락처</label>
-                    <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="details">문의 및 요청 내용</label>
-                    <textarea id="details" name="details" placeholder="희망 교육 일자, 교육 인원, 기타 문의 사항을 적어주세요." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">신청하기</button>
-            </form>
-        </div>
+        <a href="https://forms.gle/본인의구글폼주소" target="_blank" class="form-link-area">
+            <img src="Form.png" alt="교육신청서 구글 폼 연동">
+        </a>
+        <p class="contact-text">이미지를 클릭하시면 교육신청서(구글 폼)로 연결됩니다.</p>
     </section>
 
 </body>
