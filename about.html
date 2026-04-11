@@ -18,15 +18,13 @@
 
         .page-banner { 
             height: 300px; 
-            /* 💡 실제 깃허브에 올린 파일명과 대소문자까지 일치해야 합니다 */
-            background-image: url('About_Background.jpg'); 
+            background-image: url('About main.png'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* 💡 고정 효과(fixed)를 해제하여 모바일 호환성을 높임 */
             background-attachment: scroll; 
             display: flex; justify-content: center; align-items: center; flex-shrink: 0; 
-            background-color: #333; /* 이미지 로딩 전 배경색 */
+            background-color: #333;
         }
         
         .banner-title-box { 
@@ -36,23 +34,18 @@
 
         .container { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; }
 
-        .about-text-group { margin-bottom: 80px; }
-        .about-text-group p { font-size: 19px; color: #444; margin-bottom: 10px; word-break: keep-all; }
-        .about-text-group .main-title { font-size: 26px; font-weight: bold; color: #000; margin-bottom: 30px; line-height: 1.4; }
-        
-        .divider { width: 40px; height: 2px; background: #ddd; margin: 40px auto; }
+        .about-text-group { margin-bottom: 50px; }
+        .about-text-group p { font-size: 19px; color: #444; margin-bottom: 12px; word-break: keep-all; }
+        .about-text-group .emp-text { font-weight: bold; color: #000; margin-top: 20px; }
 
         @media (max-width: 768px) { 
             header { height: auto; flex-direction: column; padding: 15px 10px; gap: 15px; }
             .logo-area img { height: 45px; }
             nav { width: 100%; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
             nav a { font-size: 15px; white-space: nowrap; }
-
             .page-banner { height: 200px; } 
             .banner-title-box { font-size: 28px; padding: 10px 40px; } 
-
             .about-text-group p { font-size: 16px; }
-            .about-text-group .main-title { font-size: 20px; }
         }
     </style>
 </head>
@@ -77,29 +70,16 @@
     <main class="container">
         <div class="about-text-group">
             <p>위기의 순간, 올바른 응급처치는 생명을 지키는 가장 확실한 방법입니다.</p>
-            <p>세이프N교육센터는 풍부한 현장 경험을 보유한 1급 응급구조사들로 구성된 전문가 그룹입니다.</p>
-            <br>
-            <p>우리는 한 사람의 경험에 의존하지 않고, 다양한 응급 현장에서 쌓아온 팀의 노하우를 바탕으로 실제 상황에서 즉시 적용 가능한 실전 중심 교육을 제공합니다.</p>
-            <p>응급상황은 예고 없이 찾아오지만, 준비된 대응은 그 결과를 바꿉니다.</p>
-            <br>
-            <p>응급처치는 특정 전문가의 기술이 아닌, 우리 모두가 갖추어야 할 생존의 기본입니다.</p>
-            <p>생명의 무게를 깊이 이해하는 베테랑 전문가들이 모여, 한 사람의 올바른 행동이 소중한 생명을 구할 수 있도록 책임감을 가지고 교육합니다.</p>
-            <br>
-            <p style="font-weight: bold; color: #000;">생명을 지키는 교육, 검증된 전문가 팀이 함께하는 세이프N교육센터에서 시작하십시오.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="about-text-group">
-            <p class="main-title">"분야별 최고의 전문가들이 전하는 실전 교육의 정수"</p>
-            
             <p>세이프N교육센터는 각 분야에서 실력을 인정받은 1급 응급구조사들이 뜻을 모아 설립한 응급처치 전문 교육 기관입니다.</p>
+            <p>우리는 한 사람의 경험에 의존하지 않고, 다양한 응급 현장에서 쌓아온 전문가 그룹의 노하우를 바탕으로 실제 상황에서 즉시 적용 가능한 실전 중심 교육을 제공합니다.</p>
             <br>
-            <p>현장에서 잔뼈가 굵은 다수의 전문가가 직접 교육을 설계하고 운영하며, 어떤 응급상황에서도 흔들림 없이 대처할 수 있는 실무 최적화 커리큘럼을 제안합니다.</p>
-            <p>응급처치는 선택이 아닌 필수이며, 누구나 익혀야 할 생존의 기술입니다.</p>
+            <p>현장에서 잔뼈가 굵은 다수의 베테랑 전문가가 직접 교육을 설계하고 운영하며, 어떤 응급상황에서도 흔들림 없이 대처할 수 있는 실무 최적화 커리큘럼을 제안합니다.</p>
+            <p>응급상황은 예고 없이 찾아오지만, 준비된 대응은 그 결과를 바꿉니다.</p>
+            <p>응급처치는 특정 전문가의 기술이 아닌, 우리 모두가 갖추어야 할 생존의 기본이자 필수적인 기술입니다.</p>
             <br>
-            <p>전문가 개개인의 역량을 결집하여, 단순한 이론 전달을 넘어 교육생 한 분 한 분이 생명의 수호자가 될 수 있도록 지원합니다.</p>
-            <p style="font-weight: bold; color: #000;">생명을 지키는 가장 확실한 준비, 세이프N의 전문가 그룹이 여러분의 든든한 파트너가 되겠습니다.</p>
+            <p>생명의 무게를 깊이 이해하는 전문가들이 모여, 단순한 이론 전달을 넘어 교육생 한 분 한 분이 생명의 수호자가 될 수 있도록 책임감을 가지고 교육합니다.</p>
+            <p>한 사람의 올바른 행동이 소중한 생명을 구할 수 있도록 세이프N의 전문가 그룹이 여러분의 든든한 파트너가 되겠습니다.</p>
+            <p class="emp-text">생명을 지키는 가장 확실한 준비, 검증된 전문가 팀이 함께하는 세이프N교육센터에서 시작하십시오.</p>
         </div>
     </main>
 
